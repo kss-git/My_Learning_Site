@@ -1,0 +1,167 @@
+/* =========================
+   COLOR THEME (easy to tweak)
+========================= */
+:root {
+  --primary: #4f46e5;
+  --secondary: #06b6d4;
+  --accent: #f59e0b;
+  --bg: #f9fafb;
+  --card-bg: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f0fdfa);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER (Gradient!)
+========================= */
+header {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 18px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+  margin-top: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--primary);
+}
+
+/* =========================
+   CARDS (Colorful + Hover)
+========================= */
+.card {
+  background: var(--card-bg);
+  padding: 22px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 6px solid var(--primary);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   EXAMPLES (Different colors!)
+========================= */
+.example {
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e0f2fe, #ecfeff);
+  border-left: 5px solid var(--secondary);
+}
+
+/* =========================
+   CODE
+========================= */
+code {
+  background: #111827;
+  color: #22c55e;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  color: white;
+  text-align: center;
+  padding: 18px 0;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+/* =========================
+   BUTTONS (for future use)
+========================= */
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #d97706;
+}
